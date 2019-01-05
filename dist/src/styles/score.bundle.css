@@ -1,0 +1,87 @@
+.score-body {
+  color: #ffffff;
+  font-size: 35px;
+
+  background-color: #2b323a;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+h1 {
+  margin: 40px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  user-select: none;
+}
+
+.score-table{
+  width: 100%;
+  margin-bottom: 40px;
+
+  border-collapse: collapse;
+}
+
+.score-table th,
+.score-table td {
+  padding: 10px;
+  text-align: center;
+
+  border: 1px solid #ffffff;
+
+}
+
+.score-table th:first-child,
+.score-table td:first-child,
+.score-table th:last-child,
+.score-table td:last-child{
+  width: 150px;
+}
+
+.score-button {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+
+  font: inherit;
+  color: #2b323a;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+.score-button:hover,
+.score-button:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+
+/*# sourceMappingURL=score.bundle.css.map*/

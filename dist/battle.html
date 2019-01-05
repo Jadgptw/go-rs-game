@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Battle</title>
+<link href="src/styles/battle.bundle.css" rel="stylesheet"></head>
+<body class="fight-wrapper">
+
+  <section class="health-wrapper">
+    <div class="health health-user">
+      <p class="health-name health-user-name"> </p>
+      <div class="health-ph-wrapper">
+        <div class="health-ph health-user-ph"></div>
+      </div>
+    </div>
+    <div class="round-wrapper">
+      <p class="versus">VS</p>
+      <p>Round <span class="round-number">1</span></p>
+    </div>
+    <div class="health health-monster">
+      <p class="health-name health-monster-name"> </p>
+      <div class="health-ph-wrapper">
+        <div class="health-ph health-monster-ph"></div>
+      </div>
+    </div>
+  </section>
+  <button class="action-button" type="button">Hit The Opponent</button>
+
+  <section class="battle-fight-wrapper">
+    <div class="battle-user-hero">
+  <audio class="hero-take-hit-sound" src="src/components/hero/sounds/takeHit.mp3">play</audio>
+  <audio class="hero-make-hit-sound" src="src/components/hero/sounds/makeHit.mp3">play</audio>
+  <audio class="game-over-sound" src="src/components/hero/sounds/game-over.mp3">play</audio>
+</div>
+
+    <div class="battle-monster">
+  <div class="monster-head"></div>
+  <div class="monster-body"></div>
+  <div class="monster-left-hand"></div>
+  <div class="monster-left-leg"></div>
+  <div class="monster-right-hand"></div>
+  <div class="monster-right-leg"></div>
+  <audio class="monster-take-hit-sound" src="src/components/monster/sounds/takeHit.mp3">play</audio>
+  <audio class="vulkan-sound" src="src/components/monster/sounds/vulkan.mp3">play</audio>
+  <audio class="next-please-sound" src="src/components/monster/sounds/next-monster.mp3">play</audio>
+</div>
+
+  </section>
+
+  <section class="modal modal-hit-type">
+  <h2>Choose Hit Type</h2>
+  <div class="hit-type-wrapper">
+    <ul class="hit-type" tabindex="0" data-hitIndex="0" data-hitType="firstType" data-hitDamage="10">
+      <li class="hit-type-name"><h3>Stroking Hit</h3></li>
+      <li class="hit-type-damage">damage:<span>10 Ph</span></li>
+      <li class="hit-type-difficulty">difficulty:<span>1-8</span></li>
+    </ul>
+    <ul class="hit-type" tabindex="0" data-hitIndex="1" data-hitType="secondType" data-hitDamage="20">
+      <li class="hit-type-name"><h3>Great Heat</h3></li>
+      <li class="hit-type-damage">damage:<span>20 Ph</span></li>
+      <li class="hit-type-difficulty">difficulty:<span>9-15</span></li>
+    </ul>
+  </div>
+  <button class="modal-hit-type-close" type="button"></button>
+</section>
+<div class="modal-overlay"></div>
+
+  <section class="modal modal-task">
+
+</section>
+
+
+<script type="text/javascript" src="src/scripts/battle.bundle.js"></script></body>
+</html>
+

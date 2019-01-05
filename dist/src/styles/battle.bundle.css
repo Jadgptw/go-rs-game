@@ -1,0 +1,1056 @@
+body {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fight-wrapper {
+  position: relative;
+  width: 95vw;
+  height: 90vh;
+  margin: 0 auto;
+
+  background-color: #2b323a;
+}
+
+.health-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  padding: 0 30px;
+
+  user-select: none;
+}
+
+.health {
+  width: 45%;
+  height: 100px;
+
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.health-user {
+  border-bottom-right-radius: 100px;
+}
+
+.health-monster {
+  border-bottom-left-radius: 100px;
+}
+
+.round-wrapper p {
+  margin: 0;
+  padding: 0 15px;
+
+  color: #2b323a;
+  font-size: 40px;
+  text-align: center;
+
+  white-space: nowrap;
+}
+.round-wrapper .versus {
+  margin: 0;
+
+  color: #2b323a;
+  font-size: 50px;
+}
+
+.health-name {
+  margin: 10px 0;
+
+  text-align: center;
+  font-size: 30px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.health-ph-wrapper {
+  width: 70%;
+  height: 25px;
+  margin: 0 auto;
+
+  border: 2px solid #2b323a;
+}
+
+.health-ph {
+  height: 100%;
+  background-color: #2b323a;
+}
+
+.health-monster-ph {
+  margin-left: auto;
+}
+
+.action-button {
+  display: block;
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 10px;
+
+  font: inherit;
+  color: #2b323a;
+  font-size: 30px;
+
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+
+  user-select: none;
+  cursor: pointer;
+}
+.action-button:hover,
+.action-button:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.battle-fight-wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 1%;
+  display: flex;
+  justify-content: space-between;
+  width: 1500px;
+  margin-left: -750px;
+}
+
+@keyframes start-picture-animation {
+  50% {background-position-y: 15px}
+  100% {background-position-y: 0}
+}
+
+.battle-user-hero {
+  width: 400px;
+  height: 470px;
+}
+
+@keyframes ironman-hit {
+  80% {background-position-x: -1600px; width: 400px}
+  99% {background-position-x: -1600px; width: 1600px}
+  100% {background-position-x: -1600px; width: 400px}
+}
+
+@keyframes ironman-hit-slide {
+  99% {margin-left: 30%}
+  100% {margin-left: 0}
+}
+
+.battle-ironman-firstType-hit,
+.battle-ironman-secondType-hit {
+  animation: ironman-hit 1.5s steps(4), ironman-hit-slide 1.5s steps(100);
+}
+
+@keyframes hulk-hit {
+  80% {background-position-x: -1600px}
+  100% {background-position-x: -1600px}
+}
+
+@keyframes hulk-secondType-hit {
+  50% {background-position-x: -1600px; width: 400px}
+  99% {background-position-x: -1600px; width: 2000px}
+  100% {background-position-x: -1600px; width: 400px}
+}
+
+.battle-hulk-firstType-hit {
+  animation: hulk-hit 1.5s steps(4);
+}
+
+.battle-hulk-secondType-hit {
+  animation: hulk-secondType-hit 1.5s steps(4);
+}
+
+@keyframes spiderman-hit {
+  50% {background-position-x: -800px; width: 400px}
+  99% {background-position-x: -800px; width: 2000px}
+  100% {background-position-x: -800px; width: 400px}
+}
+
+@keyframes spiderman-secondType-hit {
+  80% {background-position-x: -1600px}
+  100% {background-position-x: -1600px}
+}
+
+@keyframes spiderman-hit-slide {
+  20% {margin-left: 0}
+  99% {margin-left: 60%}
+  100% {margin-left: 0}
+}
+
+.battle-spiderman-firstType-hit {
+  animation: spiderman-hit 1.5s steps(2);
+}
+
+.battle-spiderman-secondType-hit {
+  animation: spiderman-secondType-hit 1.5s steps(4), spiderman-hit-slide 1.5s steps(100);
+}
+
+@keyframes blackpanther-hit {
+  80% {background-position-x: -2400px}
+  100% {background-position-x: -2400px}
+}
+
+@keyframes blackpanther-secondType-hit {
+  80% {background-position-x: -1600px}
+  100% {background-position-x: -1600px}
+}
+
+@keyframes blackpanther-hit-slide {
+  20% {margin-left: 0}
+  99% {margin-left: 60%}
+  100% {margin-left: 0}
+}
+
+.battle-blackpanther-firstType-hit {
+  animation: blackpanther-hit 1.5s steps(6), blackpanther-hit-slide 1.5s steps(100);
+}
+
+.battle-blackpanther-secondType-hit {
+  animation: blackpanther-secondType-hit 1.5s steps(4), blackpanther-hit-slide 1.5s steps(100);
+}
+
+@keyframes hero-killed {
+  1% {background-position-y: -465px; background-position-x: 0}
+  80% {background-position-y: -465px; background-position-x: -1600px}
+  100% {background-position-y: -465px; background-position-x: -1600px}
+}
+
+.battle-hero-killed {
+  animation: hero-killed 1s steps(4);
+}
+
+@keyframes hero-shaked {
+  50% {background-position-y: -470px}
+  100% {background-position-y: -470px}
+}
+
+.battle-hero-shaked {
+  animation: hero-shaked 0.6s steps(1);
+}
+
+.hero-start {
+  width: 250px;
+  height: 291px;
+}
+
+.battle-monster {
+  position: relative;
+  width: 400px;
+  height: 470px;
+}
+
+.monster-head {
+  position: absolute;
+  left: 30%;
+  top: 17%;
+  width: 70px;
+  height: 70px;
+  z-index: 3;
+}
+
+.monster-body {
+  position: absolute;
+  left: 26%;
+  top: 23%;
+  width: 120px;
+  height: 185px;
+  z-index: 2;
+}
+
+.monster-right-hand {
+  position: absolute;
+  left: 4%;
+  top: 27%;
+  width: 135px;
+  height: 125px;
+  z-index: 1;
+}
+
+.monster-right-leg {
+  position: absolute;
+  left: 8%;
+  top: 49%;
+  width: 135px;
+  height: 150px;
+  z-index: 1;
+}
+
+.monster-left-hand {
+  position: absolute;
+  left: 40%;
+  top: 25%;
+  width: 110px;
+  height: 140px;
+  z-index: 3;
+}
+
+.monster-left-leg {
+  position: absolute;
+  left: 33%;
+  top: 50%;
+  width: 120px;
+  height: 240px;
+  z-index: 3;
+}
+
+
+@keyframes monster-head-shake {
+  50% {top: 12%}
+  100% {top: 17%}
+}
+
+@keyframes monster-left-hand-shake {
+  50% {left: 45%}
+  100% {left: 40%}
+}
+
+@keyframes monster-left-leg-shake {
+  50% {left: 40%}
+  100% {left: 33%}
+}
+
+@keyframes monster-right-hand-shake {
+  50% {left: 0}
+  100% {left: 4%}
+}
+
+@keyframes monster-right-leg-shake {
+  50% {left: 4%}
+  100% {left: 8%}
+}
+
+.battle-monster-head-shaked {
+  animation: monster-head-shake 0.5s steps(100);
+}
+
+.battle-monster-left-hand-shaked {
+  animation: monster-left-hand-shake 0.5s steps(100);
+}
+
+.battle-monster-left-leg-shaked {
+  animation: monster-left-leg-shake 0.5s steps(100);
+}
+
+.battle-monster-right-hand-shaked {
+  animation: monster-right-hand-shake 0.5s steps(100);
+}
+
+.battle-monster-right-leg-shaked {
+  animation: monster-right-leg-shake 0.5s steps(100);
+}
+
+@keyframes monster-head-kill {
+  100% {transform: rotate(90deg); top: 65%}
+}
+
+@keyframes monster-body-kill {
+  100% {transform: rotate(90deg); top: 65%}
+}
+
+@keyframes monster-left-hand-kill {
+  100% {transform: rotate(90deg); top: 65%}
+}
+
+@keyframes monster-left-leg-kill {
+  100% {transform: rotate(90deg); top: 62%}
+}
+
+@keyframes monster-right-hand-kill {
+  100% {transform: rotate(90deg); top: 65%}
+}
+
+@keyframes monster-right-leg-kill {
+  100% {transform: rotate(90deg); top: 60%}
+}
+
+.battle-monster-head-kill {
+  animation: monster-head-kill 1s steps(100);
+}
+
+.battle-monster-body-kill {
+  animation: monster-body-kill 1s steps(100);
+}
+
+.battle-monster-left-hand-kill {
+  animation: monster-left-hand-kill 1s steps(100);
+}
+
+.battle-monster-left-leg-kill {
+  animation: monster-left-leg-kill 1s steps(100);
+}
+
+.battle-monster-right-hand-kill {
+  animation: monster-right-hand-kill 1s steps(100);
+}
+
+.battle-monster-right-leg-kill {
+  animation: monster-right-leg-kill 1s steps(100);
+}
+
+@keyframes shake {
+  0% { transform: translate(2px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(0px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(2px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(2px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.battle-monster-hit {
+  animation: shake 1.5s;
+}
+
+@keyframes show-modal {
+  0% {
+    transform: translateY(-1000px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -350px;
+
+  background-color: #ffffff;
+  border-radius: 50px;
+
+  z-index: 10;
+}
+
+.modal h2{
+  margin: 25px 0;
+  margin-bottom: 35px;
+
+  color: #2b323a;
+  font-size: 40px;
+  text-align: center;
+
+  user-select: none;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.5);
+  z-index: 9;
+}
+
+.modal-show {
+  display: block;
+  animation: show-modal 0.5s;
+}
+
+.hit-type-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+
+  font-size: 25px;
+}
+
+.hit-type {
+  box-sizing: border-box;
+  width: 200px;
+  margin: 0 35px;
+  padding: 15px;
+
+  text-align: center;
+
+  border: 2px solid #2b323a;
+  border-radius: 10px;
+
+  list-style: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.hit-type:hover,
+.hit-type:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.hit-type li{
+  margin-bottom: 15px;
+}
+
+.hit-type h3 {
+  margin: 0;
+}
+
+.hit-type span {
+  display: block;
+  font-weight: bold;
+}
+
+.modal-hit-type-close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+
+  font-size: 0;
+
+  background-color: #ffffff;
+  border: none;
+
+  cursor: pointer;
+}
+
+.modal-hit-type-close::before,
+.modal-hit-type-close::after {
+  content: "";
+
+  position: absolute;
+  top: 14px;
+  right: 0;
+
+  width: 30px;
+  height: 3px;
+
+  background-color: #2b323a;
+}
+
+.modal-hit-type-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-hit-type-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-hit-type-close:hover,
+.modal-hit-type-close:focus{
+  outline: 1px solid #ff0000;
+}
+
+.modal-task h2 {
+  margin: 15px 0;
+  padding: 0;
+}
+
+.task-answer-button {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px;
+
+  font: inherit;
+  color: #ffffff;
+  font-size: 30px;
+
+  background-color: #2b323a;
+  border: 2px solid #2b323a;
+  border-radius: 5px;
+
+  user-select: none;
+  cursor: pointer;
+}
+.task-answer-button:hover,
+.task-answer-button:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.modal-task-right-answer {
+  border: 3px solid #7cfc00;
+}
+
+.modal-task-right-answer::before,
+.modal-task-right-answer::after {
+  content: "";
+
+  position: absolute;
+  top: 75%;
+  left: 75%;
+
+  width: 20%;
+  height: 3px;
+
+  background-color: #7cfc00;
+}
+
+.modal-task-right-answer::before {
+  transform: rotate(90deg);
+}
+
+.modal-task-wrong-answer {
+  border: 3px solid #ff0000;
+}
+
+.modal-task-wrong-answer::before,
+.modal-task-wrong-answer::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 15%;
+
+  width: 70%;
+  height: 3px;
+
+  background-color: #ff0000;
+}
+
+.modal-task-wrong-answer::before {
+  transform: rotate(45deg);
+}
+
+.modal-task-wrong-answer::after {
+  transform: rotate(-45deg);
+}
+
+.translate-task-label {
+  display: block;
+  margin-bottom: 15px;
+
+  color: #2b323a;
+  font-size: 40px;
+  text-align: center;
+}
+
+.translate-task-answer {
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0 15px;
+
+  font: inherit;
+  font-size: 30px;
+
+  border: 2px solid #2b323a;
+}
+
+.translate-task-answer:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.math-task-label {
+  display: block;
+  margin-bottom: 15px;
+
+  color: #2b323a;
+  font-size: 40px;
+  text-align: center;
+}
+
+.math-task-answer {
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0 15px;
+
+  font: inherit;
+  font-size: 30px;
+
+  border: 2px solid #2b323a;
+}
+
+.math-task-answer:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.math-task-note {
+  margin: 0;
+
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+}
+
+.mixed-letters-wrapper {
+  margin-bottom: 15px;
+  height: 150px;
+
+  color: #2b323a;
+  font-size: 35px;
+  text-align: center;
+
+  user-select: none;
+}
+
+.mixed-letters-wrapper span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 30px 5px;
+
+  border: 2px solid #2b323a;
+
+  cursor: pointer;
+}
+
+.find-error-wrapper {
+  margin-bottom: 15px;
+  height: 150px;
+
+  color: #2b323a;
+  font-size: 35px;
+  text-align: center;
+
+  user-select: none;
+}
+
+.find-error-wrapper span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 30px 5px;
+
+  border: 2px solid #2b323a;
+
+  cursor: pointer;
+}
+
+.find-error-wrapper span:hover,
+.find-error-wrapper span:focus,
+span.find-task-letter-checked {
+  border: 2px solid #ff0000;
+  outline: none;
+}
+
+.rebus-task-label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #2b323a;
+  font-size: 40px;
+  text-align: center;
+}
+
+.rebus-task-answer {
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 15px;
+
+  font: inherit;
+  font-size: 30px;
+
+  border: 2px solid #2b323a;
+}
+
+.rebus-task-answer:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.riddle-task-label {
+  display: block;
+  margin-bottom: 15px;
+  padding: 0 5px;
+
+  color: #2b323a;
+  font-size: 35px;
+  text-align: center;
+}
+
+.riddle-task-answer {
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0 15px;
+
+  font: inherit;
+  font-size: 30px;
+
+  border: 2px solid #2b323a;
+}
+
+.riddle-task-answer:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.proverb-task-label {
+  display: block;
+  margin-bottom: 15px;
+  padding: 0 5px;
+
+  color: #2b323a;
+  font-size: 35px;
+  text-align: center;
+}
+
+.proverb-task-answer {
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0 15px;
+
+  font: inherit;
+  font-size: 30px;
+
+  border: 2px solid #2b323a;
+}
+
+.proverb-task-answer:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.adult-task-label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #2b323a;
+  font-size: 40px;
+  text-align: center;
+}
+
+.adult-task-answer {
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 15px;
+
+  font: inherit;
+  font-size: 30px;
+
+  border: 2px solid #2b323a;
+}
+
+.adult-task-answer:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.animal-task-label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #2b323a;
+  font-size: 40px;
+  text-align: center;
+}
+
+.animal-task-answer {
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 15px;
+
+  font: inherit;
+  font-size: 30px;
+
+  border: 2px solid #2b323a;
+}
+
+.animal-task-answer:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.missed-letter-task-label {
+  display: block;
+  margin-bottom: 15px;
+  padding: 0 5px;
+
+  color: #2b323a;
+  font-size: 35px;
+  text-align: center;
+}
+
+.missed-letter-task-answer {
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0 15px;
+
+  font: inherit;
+  font-size: 30px;
+
+  border: 2px solid #2b323a;
+}
+
+.missed-letter-task-answer:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.color-task-label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #2b323a;
+  font-size: 40px;
+  text-align: center;
+}
+
+.color-task-answer {
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 15px;
+
+  font: inherit;
+  font-size: 30px;
+
+  border: 2px solid #2b323a;
+}
+
+.color-task-answer:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.grammar-task-label {
+  display: block;
+  margin-bottom: 15px;
+  padding: 0 5px;
+
+  color: #2b323a;
+  font-size: 35px;
+  text-align: center;
+}
+
+.grammar-task-answer {
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0 15px;
+
+  font: inherit;
+  font-size: 30px;
+
+  border: 2px solid #2b323a;
+}
+
+.grammar-task-answer:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.question-task-wrapper {
+  margin-bottom: 15px;
+  padding: 15px 0;
+
+  color: #2b323a;
+  font-size: 30px;
+  text-align: center;
+
+  user-select: none;
+}
+
+.question-task-wrapper span {
+  display: inline-block;
+  height: 50px;
+  margin: 10px;
+  padding: 0 10px;
+
+  border: 2px solid #2b323a;
+
+  cursor: pointer;
+}
+
+.question-task-wrapper span:hover,
+.question-task-wrapper span:focus,
+span.question-task-letter-checked {
+  border: 2px solid #ff0000;
+  outline: none;
+}
+
+.transport-task-label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #2b323a;
+  font-size: 40px;
+  text-align: center;
+}
+
+.transport-task-answer {
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 15px;
+
+  font: inherit;
+  font-size: 30px;
+
+  border: 2px solid #2b323a;
+}
+
+.transport-task-answer:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+.listening-task-label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #2b323a;
+  font-size: 40px;
+  text-align: center;
+}
+
+.listening-task-answer {
+  display: block;
+  width: 60%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 15px;
+
+  font: inherit;
+  font-size: 30px;
+
+  border: 2px solid #2b323a;
+}
+
+.listening-task-answer:focus {
+  border-color: #ff0000;
+  outline: none;
+}
+
+
+/*# sourceMappingURL=battle.bundle.css.map*/
