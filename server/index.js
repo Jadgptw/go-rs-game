@@ -21,4 +21,4 @@ app.use((req, res, next) => {
 
 app.use('/scoredb', scoreRouter);
 
-app.listen(process.env.GORSGAMEPORT);
+app.listen(process.env.PORT);
